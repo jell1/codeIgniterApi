@@ -8,9 +8,6 @@ use Restserver\Libraries\REST_Controller;
 class Recipes extends REST_Controller {
 	public function __construct() {
         parent::__construct();
-        Header('Access-Control-Allow-Origin: *'); //for allow any domain, insecure
-Header('Access-Control-Allow-Headers: *'); //for allow any headers, insecure
-Header('Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE'); //method allowed
         $this->load->helper('url');
         $this->load->model('Recipes_model');
     }
